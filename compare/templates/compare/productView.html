@@ -1,0 +1,105 @@
+{% extends 'compare/basic.html' %}
+
+{% block title %} Product View {% endblock %}
+
+{% block mycss %}
+
+<style>
+    .container {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #item-container {
+        margin: 10px;
+        padding: 10px;
+       margin-left: 15%;
+       margin-bottom: 20px;
+    }
+
+    #main-heading {
+        color: deepskyblue;
+        align-items: center;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    img {
+        width: 25%;
+        height: 30%;
+        margin: 25px;
+        padding: 5px;
+        display: inline;
+
+    }
+
+    .card-body {
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .card {
+        text-align: center;
+        width: 75%;
+        align-items: center;
+        margin: 18px;
+        padding: 20px;
+        border: 1.5px solid rgb(76, 76, 163);
+        margin-left: 12%;
+    }
+
+    .card-title {
+        font-size: 40px;
+        color: rgb(68, 100, 141);
+        margin: 5px;
+    }
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+<!-- Code for cards -->
+<div class="item-container">
+    <h2 id="main-heading">Results for the searched item</h2>
+    <div class="card">
+        <h3 class="card-title">Amazon</h3>
+        <img src="{{amazon_image_url}}" alt="Loading Image">
+        <div class="card-body">
+
+            <h5 class="card-text">{{heading}}</h5>
+            <h3>Price: {{price}}</h3>
+            <a href="{{link}}" class="btn btn-primary" target="_blank">Go to the item</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3 class="card-title">Flipkart</h3>
+        <img src="{{flip_image_url}}" alt="Loading Image">
+        <div class="card-body">
+
+            <h5 class="card-text">{{flip_heading}}</h5>
+            <h3>Price: {{flip_price}}</h3>
+            <a href="{{flip_link}}" class="btn btn-primary" target="_blank">Go to the item</a>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <h3 class="card-title">Reliance Digital</h3>
+        <img src="{{amazon_image_url}}" alt="Loading Image">
+        <div class="card-body">
+
+            <h5 class="card-text">{{reliance_heading}}</h5>
+            <h3>Price:₹ {{reliance_price}}</h3>
+            <a href="{{relianceDigital_url}}" class="btn btn-primary" target="_blank">Go to the item</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

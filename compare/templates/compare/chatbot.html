@@ -1,0 +1,115 @@
+<!-- This chatbot is created by using the dialogflow and kummunicate by creating accounts on both the websites. Chat is showed and cleared by the admin by using his kummunicate accout access.  The various intents which are required to add new chat with the user is created by creating new intents regarding the topic of chat. These intents are created by using the dialogflow website account. -->
+
+<!-- This is faltu bakwas!! -->
+<!-- This is the page which help user to interact with the team member to solve the basic queries related to the designing and the team members. If the user have any kind of query then his or her query will be entertained. There may be questions related to the item, designing, algorithm and any question related to the working of the website then we will help you to sort this kind of problems.
+
+We thinks that if someone is asking anything related to our work then this provide us an great feedback about the work and feedback helps us to improve ourselves and helps us to finding our drawbacks. Our team will help you to solve any kind of problem related to using this website. Our team will reach you as soon as posible and help you to use it efficiently.
+
+We belive in fast service and take care of our user. We provide a real time convenience to customers. We can try to totally solve your problem.
+
+We provide 24x7 service to the customers so that if any user face any problem while using the website this his query will instantly solved. We have a team to do a quick response to the customers. <br>
+<b>We belive to customers satisfaction.</b> -->
+
+{% extends 'compare/basic.html' %}
+
+{% block title %} Chatter Bot {% endblock %}
+
+
+{% block mycss %}
+
+<style>
+    .chatbot-image {
+        display: inline-block;
+
+    }
+
+
+    .chatbot-image img {
+        width: 100%;
+        padding: 0.2rem;
+        height: 70%;
+
+    }
+
+    .item {
+        border: 2px solid darkgreen;
+        border-radius: 10px;
+        background-color: rgb(246 249 241);
+        width: 55vw;
+    }
+
+    .item-text p {
+        text-align: justify;
+        color: #3a5433;
+        font-size: 1.2rem;
+    }
+
+
+    .item-text h2 {
+        color: rgb(48, 116, 3);
+        ;
+    }
+</style>
+
+{% endblock %}
+
+
+
+{% block body %}
+{% load static %}
+
+<div class="container my-3">
+    <div class="col-md-6 my-3 item">
+        <div class="chatbot-image">
+            <img src="{% static 'compare/images/chatbot-chatting.png' %}" alt="" srcset="">
+        </div>
+        <div class="h-100 p-5  rounded-3 item-text">
+            <h2 style="text-align: center;">Chat With Us</h2>
+            <p>This is the page which help user to interact with the team member to solve the basic queries related to
+                the designing and the team members. If the user have any kind of query then his or her query will be
+                entertained. There may be questions related to the item, designing, algorithm and any question related
+                to the working of the website then we will help you to sort this kind of problems.
+                <br>We thinks that if someone is asking anything related to our work then this provide us an great
+                feedback about the work and feedback helps us to improve ourselves and helps us to finding our
+                drawbacks. Our team will help you to solve any kind of problem related to using this website. Our team
+                will reach you as soon as posible and help you to use it efficiently.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="col-md-6 item">
+        <div class="chatbot-image">
+            <img src="{% static 'compare/images/chatbot-problem_solving.jpg' %}" alt="" srcset="">
+        </div>
+        <div class="h-100 p-5  rounded-3 item-text">
+            <h2 style="text-align: center;">Belive in Fast Service</h2>
+            <p>We belive in fast service and take care of our user. We provide a real time convenience to customers. We
+                can try to totally solve your problem.<br> We provide <strong>24x7</strong> service to the customers so
+                that if any user face any problem while using the website this his query will instantly solved. We have
+                a team to do a quick response to the customers. <br>
+                <b>We belive to customers satisfaction.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block myjs %}
+
+<script type="text/javascript">
+    (function (d, m) {
+        var kommunicateSettings =
+            { "appId": "26cb8fff33c4e7ec25daa6f8c85054fe8", "popupWidget": true, "automaticChatOpenOnNavigation": true };
+        var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+        window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
+
+{% endblock %}

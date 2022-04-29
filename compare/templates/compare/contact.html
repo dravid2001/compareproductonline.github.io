@@ -1,0 +1,129 @@
+{% extends 'compare/basic.html' %}
+
+{% block title %} Contact {% endblock %}
+
+
+{% block mycss %}
+
+<style>
+    .form-contact input {
+        background-color: darkgrey;
+    }
+
+
+    .form-contact label {
+        color: #054405;
+        font-size: 1.2rem;
+    }
+
+    .form-contact textarea {
+        background-color: darkgrey;
+    }
+
+    #contact-submit{
+        padding: 0.5rem;
+        border-radius: 25px;
+        font-size: 1.2rem;
+        color: rgb(4, 46, 4);
+    }
+    </style>
+
+{% endblock %}
+
+
+
+{% block body %}
+
+<div class="container my-3">
+
+    <!-- Alert -->
+    <div class="alert-container" id="alert-container">
+        <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div> -->
+    </div>
+
+    <h1 class="heading">Contact Us</h1>
+    <form id="form-contact" class="row g-3 form-contact" method="POST" action="/compare/contact/" name="contact-form">{% csrf_token %}
+        <div class="col-md-6">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="col-12">
+            <label for="Phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone">
+        </div>
+        <div class="col-12">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" name="address">
+        </div>
+
+
+        <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity" name="city">
+        </div>
+        <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <input type="text" class="form-control" id="state" name="state">
+
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="zip" name="zip">
+        </div>
+
+        <div class="mb-3">
+            <label for="query" class="form-label">Enter your query.</label>
+            <textarea class="form-control" id="query" rows="3" name="query"></textarea>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" id="contact-submit" class="btn-outline-success form-button" id="contact-form-submit">Submit</button>
+        </div>
+
+
+
+
+    </form>
+
+</div>
+
+{% endblock %}
+
+
+{% block myjs %}
+
+
+
+<script>
+    console.log("Script is included successfully.")
+    //    $("#contact-form-submit").click(function(e) {
+    //        e.preventDefault()
+    //       alert("The Form has been Submitted.");
+    //    });
+
+
+    document.querySelector("button.form-button").addEventListener("click", function (e) {
+        // alert("Form is successfully submitted.");
+        e.preventDefault();
+        document.getElementById("alert-container").innerHTML = `
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+           Your query has been recorded successfully!!!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        `
+    }, false);
+
+
+document.getElementById("contact-submit").addEventListener("click",function () {
+    document.getElementById("form-contact").reset();
+})
+
+</script>
+{% endblock %}

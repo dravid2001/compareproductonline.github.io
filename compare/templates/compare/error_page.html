@@ -1,0 +1,51 @@
+{% extends 'compare/basic.html' %}
+
+{% block title %}
+Error-Please try again.
+
+{% endblock %}
+
+{% block mycss %}
+{% load static %}
+<style>
+
+.head{
+    text-align: center;
+    margin: auto;
+    text-shadow: 2px;
+    font-weight: 2rem;
+    color: #942003;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_body{
+   
+    display: flex;
+    height: 90vh;
+    background: url("{% static 'compare/images/error_page.jpg' %}") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+
+<div class="container-fluid main_body">
+
+    <h1 class="head">There is an error which we are trying to solve please try again after  some time!!!</h1>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends 'compare/basic.html' %}
+
+{% block title %} About Us {% endblock %}
+
+{% block mycss %}
+
+<style>
+
+    .container{
+        margin-bottom: 2rem;
+    }
+
+
+    .card {
+        border-radius: 15px;
+        background-color: rgb(246 249 241);
+    }
+
+    .card:hover {
+        border: 2px solid grey;
+        border-radius: 20px;
+    }
+
+    .card-body p{
+        text-align: justify;
+        font-size: 1.1rem;
+        color: #3a5433;
+    }
+
+    .card-body h5{
+        color: rgb(48, 116, 3);
+    }
+
+    .about-upper h1{
+        color: rgb(48, 116, 3);
+    }
+
+    .about-upper p{
+        color:#3a5433;
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+
+</style>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+<div class="container my-3">
+    <div class="row my-3 about-upper">
+        <h1>About Us</h1>
+        <p>This is the website which is designed by Ajay Kumar Kushwaha(1802912006), Akshat Sharma(1802912007), Bilal
+            Ahmed(1900290129001), Dravid(1802912026) as a team. This is the major project as a aktu curriculum. This
+            project is created under the guidance of Asst. Proffesor Ms. Mahawish Anjuam Department of Computer Science.
+            The project is based on comparing a particular item in different website and then show the result on the
+            same place. This website is designed to save the user time and effort and make it easy to compare a
+            particular item on different e-commerence websites. </p>
+
+    </div>
+    <div class="row">
+        <div class="card my-3 mx-3 " style="width: 45%;">
+            <div class="card-body hover-zoom">
+                <h5 class="card-title">Ajay Kumar Kushwaha</h5>
+                <h6 class="card-subtitle mb-2 text-muted">1802912006</h6>
+                <p class="card-text">I am a B. Tech. student in KIET Group of Institutions, Ghaziabad. I have completed
+                    my degree in year 2022. This site is created by our team as a major project in the last year. Ms.
+                    Mahawish Anajaum is our team coordinator and under her brilliant supervision we have created this
+                    website as our project. </p>
+                <a href="https://www.kiet.edu/" class="card-link">KIET Ghaziabad</a>
+            </div>
+        </div>
+
+        <div class="card my-3 mx-3" style="width: 45%;">
+            <div class="card-body">
+                <h5 class="card-title">Akshat Sharma</h5>
+                <h6 class="card-subtitle mb-2 text-muted">1802912007</h6>
+                <p class="card-text">I am a B. Tech. student in KIET Group of Institutions, Ghaziabad. I have completed
+                    my degree in year 2022. This site is created by our team as a major project in the last year. Ms.
+                    Mahawish Anajaum is our team coordinator and under her brilliant supervision we have created this
+                    website as our project. </p>
+                <a href="https://www.kiet.edu/" class="card-link">KIET Ghaziabad</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card my-3 mx-3" style="width: 45%;">
+            <div class="card-body">
+                <h5 class="card-title">Bilal Ahmed</h5>
+                <h6 class="card-subtitle mb-2 text-muted">1900290129001</h6>
+                <p class="card-text">I am a B. Tech. student in KIET Group of Institutions, Ghaziabad. I have completed
+                    my degree in year 2022. This site is created by our team as a major project in the last year. Ms.
+                    Mahawish Anajaum is our team coordinator and under her brilliant supervision we have created this
+                    website as our project. </p>
+                <a href="https://www.kiet.edu/" class="card-link">KIET Ghaziabad</a>
+            </div>
+        </div>
+
+        <div class="card my-3 mx-3" style="width: 45%;">
+            <div class="card-body">
+                <h5 class="card-title">Dravid</h5>
+                <h6 class="card-subtitle mb-2 text-muted">1802912026</h6>
+                <p class="card-text">I am a B. Tech. student in KIET Group of Institutions, Ghaziabad. I have completed
+                    my degree in year 2022. This site is created by our team as a major project in the last year. Ms.
+                    Mahawish Anajaum is our team coordinator and under her brilliant supervision we have created this
+                    website as our project. </p>
+                <a href="https://www.kiet.edu/" class="card-link">KIET Ghaziabad</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block css %}
+
+<style>
+    .body {
+        margin: 0px;
+        padding: 2px;
+    }
+
+    .container {
+        font-size: 1.2rem;
+
+    }
+
+    .card-body:hover {
+        background-color: rgb(5, 49, 51);
+
+    }
+</style>
+{% endblock %}
